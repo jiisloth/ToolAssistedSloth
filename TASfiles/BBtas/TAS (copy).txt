@@ -1,0 +1,375 @@
+#This is a comment. %XX to wait XX frames, @YY to wait to YYth frame . for single frame skip
+#Save state with ! (Takes 1 frame so change to . later)
+#DPAD: WASD A:L B:K START:H SELECT:G
+#Jumps: 5t: ns:36f s: 22 
+#Shooting: No candy: 24f Candy: 11f
+##################################
+
+@248 H ..... H #Start Game
+%502
+! # LEVEL 1
+%37 [L +D] %43 #frame perfect startjump
+[L -D] %36  
+[L] %24
+K %24 K .. +D %21 [K -D A] #shoot enemies FREE TIME START
+%24 K +A %11 +L %42 -A %60 +D %10 -D %50 +D %50 -D %50 +D %48 -D %10 +A
+%149 -[A L] # End Of Level
+%100 
+! # LEVEL 2
+%37 [L] %42
++D %10 -D
+%160 K %60 K
++D %51 -D
+%30 K %24 K # FREE TIME START
+%517 #EOL
+%100 
+! # LEVEL 3
+%37 [L +D] %72
+L %10 -D
+%78 [A K] %28 [D K] %29 [A K] %22 [L D].[A K] #ENEMIES DEAD. FREE TIME START
+.+D %35 L %73 -D %87 D %90 +A ................ L.. -A D
+%50[L +A] %80 -A %10 +A %57 -A . # EOL3
+%100 
+! # LEVEL 4
+%37 [L +D] %76 -D
+%80 K %54 K %30 K %24 [A K] [D L] %22 +D K %24 K ..... L -D #FREETIME
+.+A %36 K -A %30 +L +A %5 -A %300 -L
+%133 # EOL
+%100 
+! # LEVEL 5
+%37 [+D L] %80 -D
+%80 K
+%254 [L D] %30 K %5
+L %18 K %89 [L A] ... +D ......... K %40 L -D
+%24 K %24 K %24 K %24 K %24 K %24 K %24 K %24 K %24 K %24 K %24 K %24 K A #Shootings
+%189 #EOL
+%100 
+! # LEVEL 6
+%37 [+D L] %42 [L] %36 [L] %9 K . -D %22 [A K] %84 [A K] [D L]
+%21 +A %6 [-A K D] +L %23 K %24 K %30 K %24 K
+%50 -L %11 L %20 L %20 [+A L] %20 L %56 [-A L] . %155 L %20 L +A 
+%72 K %3 +L %19 K %11 K %50 [-A D -L]
+%254 #EOL
+%100
+! # LEVEL 7
+%37 [L D]
+%21 [L A]
+%21 A L +D
+%18 -D .. [A K] ........... [A L] %6 [+D K] %176 K .. -D %8 [A K] ....... [+D L]
+%20 -D +A %10 L %100 -A
+%398  #EOL
+%100 
+! # LEVEL 8
+%37 [L D]
+%21 [L D]
+%90 A
+%20 L
+%11 K 
+%15 K
++D %11 K %11 K %40 -D +A %100 -A
+%373 #EOL 
+%100
+! # LEVEL 9
+%37 [L D]
+%18 L %26 L %22 L %5 [A K] %11 K %9 D D D
+[L +D] %13 -D ...... L %6 K +D %13 [L] 
+? %44 L %8 [-D] %17 [K+D] %58 [A K] %12 -D %4 [D K] +A
+%39 L %6 K %30 -A
+%482  #EOL
+%100 
+! # LEVEL 10
+%37 +D
+%60 K %11 K %11 K %11 K
+%20 [-D+A]
+%51 [-A D] %20 K %10 L %40 L %10 [A K] %20 [+D +L] %15 -D +D %5 [-L -D] %20 +L %10 -L
+%38 K %11 K %11 A K .
+%36 L .......A K
+%30 L .......D K
+%30 L .......A K
+%30 L .......A K
+%30 L .......A K
+%35 L .......D K
+%30 L .......A K
+%35 L .......D K
+%30 L .......D K
+%30 L .......A K
+%40 L ........
+%19  #EOL
+%100
+! # LEVEL 11
+%37 +D
+%56 [-D +A K]
+%11 [K -A] %10 [D L] +A . [-A D K] +A
+%18 [-A D K] %8 +A .. [-A D ] +A %9 [-A +D L] %29 K
+%60 [-D] %10 [A K]+D %16 -D %13 K
++A %21 L[-A D] %10 +A %16 L[-A D] %10 +A %16 L[-A +D] .
+%70 L %59 L -D 
+%66 [+A L] %26 L %28 L [-A D]
+%174
+%100
+! # LEVEL 12
+%37 +D %27 -D
+%31 [A L] %25 L %10 +A %13 -A %10 D ?
+%86 K %12 D D [A K] %17 K %4 +D
+%71 -D
+%45 K %11 K %11 K .. [D +L]
+%100 -L %30 L
+%379 #EOL
+%100
+! # LEVEL 13
+%37
+%146 L %10 [K+D] %11 K %5 +L %21 -D %8 +D %33 -D
+A . %40 [K -L] %16 K %16 K %11 K %11 K %11 K %54 [+A L]
+%56 [-A +D L] %40 K ? %5 +L -D %30 -L K %11 K %11 K %11 K %11 K %11 K %11 K %11 K %20 +A
+%30 -A
+%342 #EOL
+%100
+! # LEVEL 14
+%37 +D
+%80 K %10 -D K %5 +D %5 [K -D] %7 +D %3 K %15 K %11 -D . . [A K]
++D %35 [-D+A] %15 L %45 L %2 K %13 -A %10
+%507 #EOL
+%100
+! # LEVEL 15
+%37 [L D] %23 [L] +D %20 [-D A]
+%33 L %10 K +D %10 K %23 K %32 L %10 K ...... +L -D +A
+%10 K %20 [K -L] %11 K L 
+%26 K -A L %8 +A %34 L -A %48 A
+%21 +D %20 L %50 L
+%30 [K +L] %20 [-D K] %11 K
+%160 +A %90 -A -L
+%106 #EOL
+%100
+! # LEVEL 16
+%37 [A +L K] %11 K %37 K %22 K %18 [+D K -L]
+%98 K .. L %25 K . L %11 K %11 [K L] %11 K %11 K %5 -D +L %10 +A %33 -L L
+%30 K %11 K L %30 L %24 -A
+%470 L %10 # EOL
+%100
+! # LEVEL 17
+%37 [+D L]
+%48 -D %54 L %8 K %26 [A K] %11 [+D K] %11 [-D A K] +D %10 [+D K] %10 [-D +A]
+%19 [-A D L] %4 K +A %46 [-A L] %4 K +A %40 L -A D %30
+%486 #EOL
+%100
+! # LEVEL 18
+%37 [L D]
+%17 L %10 +D %10 L -D %8 A +D %14 [-D L] %9 K %11 [A K] %11 [+D K] %10 -D [+D K] %20 K %5 L [-D +A] %110 -A %97 K %5 +D %40 -D +A %140 [-A D] %70 L
+%253 #EOL
+%100
+! # LEVEL 19
+%37 +D
+%30 -D
+%22 [A K]
+%50 [L D] +A %30 -A %87 [D K] %11 [A K] %11 [D K] %11 [A K]
+%9 [+D L] . K %20 -D %4 [D L] A %26 [L +A] %27 L %27 [-A L D] %36 [A K] %10
+%503 #EOL
+%100
+! # LEVEL 20
+%37 [L +D]
+%21 L %70 [-D L] %11 [A K] %20 [-D L] %11 [A K]
+%78 K +L %32 K %150 [K -L] %34 A [D +L] +A %35 -A %120 [-L +A]
+%46 L %40 L %20 -A
+%409
+%100
+! # LEVEL 21
+%37 [L D]
+%25 [A L] D %20 [L D] A %22 [L A] D %20 [L +D] %24 L %58 -D
+%106 A %10 A %10 A %10 A %10 A %10 A %10 A %10 A #Gettin teh umbrella. 
+%345 #Umbrella ride
+%100
+! #LEVEL 26
+%37 [L +A]
+%10 -A %6 L %23 L %23 L %9 [A K] %13 L %9 [A K] +D %10 K %8 L %5 K %18 K %11 K ..... +L
+..... K %45 K [-D -L +A] %5 L %50 L %50 -A
+%406 #EOL
+%100
+! # LEVEL 27
+%37 [L K A]
+%11 K %11 +L %11 K %9 +D . [-D A K] %13 K %11 K +D %10 K
+%45 [-L K] %12 L %45 K .. L %38 [-D L] A %17 K .. +L %8 K %11 K %11 K +D %10 [-D A K -L] +D
+%12 [-D A K] +D %5 L %4 [-D A K] +D %10 [-D A K] %4 L +D %6 [-D K] +A %16 K %11 K %5 L
+%69 -A #nice
+%448 # EOL
+%100
+! # LEVEL 28
+%37 +D
+%40 -D
+%169 K %13 K %13 K %13 K %13 K %13 K %8 +D . L K -D +A %36 -A
+%360 %7 [L A]
+%113 # EOL
+%100 
+! # LEVEL 29
+%37 [L +D]
+%50 -D
+%45 L %11 K +D
+%20 K %11 [-D A K] %11 K +A %10 K %30 L %10 -A +D %12 L .. %22 K %10 -D K
+[+D L] %21 [-D +A L] %29 -A
+%450 A # Being on wrong tile on purpose..
+%9 # EOL
+%100
+! # LEVEL 30
+%37 %10 +D #Losing 10 frames here for beter rng.
+%40 -D 
+%110
++W...+A...+S...+D...+K...+L...+G...+H...-W...-A...-S...-D...-K...-L...-G...-H...
++W...+A...+S...+D...+K...+L...+G...+H...-W...-A...-S...-D...-K...-L...-G...-H...
++W...+A...+S...+D...+K...+L...+G...+H...-W...-A...-S...-D...-K...-L...-G...-H...
++W...+A...+S...+D...+K...+L...+G...+H...-W...-A...-S...-D...-K...-L...-G...-H...
++W...+A...+S...+D...+K...+L...+G...+H...-W...-A...-S...-D...-K...-L...-G...-H...
++W...+A...+S...+D...+K...+L...+G...+H...-W...-A...-S...-D...-K...-L...-G...-H...
++W...+A...+S...+D...+K...+L...+G...+H...-W...-A...-S...-D...-K...-L...-G...-H...
++W...+A...+S...+D...+K...+L...+G...+H...-W...-A...-S...-D...-K...-L...-G...-H...
+%70 # end of extend dunnolol.
+! # LEVEL 31
+%37
+%268 [A K] %11 [D K] %11 K +D %10 K %16 K %11 K %11 K %10 -D +A %62 -A D
+%439 # EOL
+%100 
+! # LEVEL 32
+%37 L +A %4 -A %2 [D K] A
+%13 [+L +D] %16 -D %9 +D %25 K %11 K %19 -L
+[-D L] +D ... K %11 [-D K] %11 K %11 [K +D] .... L %10 K %10 [-D +A] %50 -A
+%456 # EOL
+%100 
+! # LEVEL 33
+%36 +D # ???? some reason faster ??
+%20 L %30 [L K] %27 -D [+L D] %30 [K -L] +A %35 [L -A] +A %5 K %25 L %5 K %15 
+[L -A] ... +A %5 K %38 [-A +D] ? %133 [+A -D] %34 K %11 
+K %5 [-A +L] %20 K %25 -L %22 L
+%100 [+A L] %100 -A
+%223 # EOL
+%100
+! # LEVEL 34
+%37 L +D
+%22 L -D %24 L %17 L %7 [A K] %11 [D K] %5 +D %5 K %11 K %11 K %10 L %20 L %22 K %5 [-D +A]
+%41 -A [L A] D D D D
+%25 [L +A] %14 K -A D 
+%511 #EOL
+%100
+! # LEVEL 35
+%37 [+L +A K]
+%30 [-L -A] %12 L %21 [L +D] %6 K %11 K -D +D %9 K %3 L %21 L %30 L %60 -D +A
+? %27 K %8 L %25 K .. L -A +D %12 -D %8 L %19 K . +L %9 K %20 +A %25 K %11 K %58 [-A-L]
+%456 #EOL
+%100
+! # LEVEL 36
+%37 [+L +A K]
+%11 K %45 K %45 K %20 [-A +D] %20 -L %9 K %2 [-D +A]  ? %64  K %8 .. L .. K %11 [-A +D K]
+%72 K %11 K %13 L K [-D +A] %140 -A
+%371 # EOL
+%100
+! # LEVEL 37
+%37 +D
+%50 L
+%14 K %6 [A -D +L] %28 [-L K] %11 K +D %5 -D .... K +A ..... L -A +A
+? %19 K ... [+L] %17 K %11 [-A D K] A %30 ..... K %11 K %50 -L %3 L %21 L +A %4 K %11 K
+%34 L %1 K %21 [-A +D L] %39 -D
+%451 # EOL
+%100
+! # LEVEL 38
+%37 L
+%17 L %23 L %23 L %23 L .
++D %13 K %16 +L 
+%50 [-D -L] %24 +D  %39 K +L .. [-D +A] %40 -L
+%39 . -A %5 +A %5 -A
+%30 [L A]
+%30 [L D]
+%30 [L A] +D %25 -D
+%600 #EOL
+%100
+! # LEVEL 39
+%37 [+D K +L]
+%11 K %27 K %13 K %22 [-D A K] %10 +D %15 -L L
+%80 [-D A K] +D %10 [-D A K] %11 [+D K] %4 [-D +A L] %51 -A
+%11 [L +D] K %24 K
+%15 L
+%102 [-D A K]
+%11 [K +L A]
+%11 K %220 +A
+%60 -L L %40 -A
+%165 # EOL
+%100
+! # LEVEL 40
+%37 +D
+%40 -D
+%15 K %10 A K %11 [D K] %11 K %6 +D %4 K %11 K %12 L %36 [-D +A] %13 K .. L
+%300 -A +L %8 -L
+%200 #EOL
+%100
+! # LEVEL 41
+%37 +D
+%77 -D
+%80 A
+%10 D D D
+%127 L %5 [A K] D
+%260 +A %70 -A
+%472 #EOL
+%100
+! # LEVEL 42
+%37 +D
+%56 L 
+%17 [K +L] %35 -D %10 K +A %101 -L L %72 -A
+%119 +A %50 -A %8 [D K]
+%534
+%100
+! # LEVEL 43
+%37 L +D %7 -D
+%8 L
+%21 L 
+%21 [L D] K %22 [A K]
+%527
+%100
+! # LEVEL 44
+%37 [L +D]
+%26 L %20 -D
+%69 L %11 K
+%529
+%100
+! # LEVEL 45
+%37 +D
+%20 L %17 [-D A L] +D %7 -D %9 L +A %17 L %6 [-A D K] %10 L .. K %24 [K+A] %40 -A
+%479
+%100
+! # LEVEL 46
+%37 L +D
+%20 L
+%17 L -D +A %13 -A
+%12 L D %9 K %17 L %2 K # cant kill them with one??
+%515
+%100
+! # LEVEL 47
+%37 L +D
+%16 [-D L] +D %21 -D L
+%23 L +D %2 K %11 K %5 -D %4 L K +D %17 K ... [+D L] %5 -D %18 A A A A A . D K [+D +L] 
+%26 -D %20 K %10 +A -L %100 -A
+%400 # EOL
+%100
+! # LEVEL 48
+%38 +D ## ? again slower? maybe the EOL counter is broken...
+%25 L %21 L -D A A A A %16 [L +D] %13 K [-D +A] %52 L %21 L  %13 K %12 K %11 K .. [-A +D] %60 K %11 K [-D +A] %80 -A
+%431 # EOL
+%100
+! # LEVEL 49
+%36 +D #??? the fok.
+%21 L %15 -D %7 [+D L] %23 L %15 -D %5 L %4 K %11 K %10 +D K +L %30 -L
+%25 L %73 L %40 -D %30 L %11 K %11 K +A %50 -A D %30 +D %60 -D
+%368 # EOL
+%100
+! # LEVEL 50
+%37 +D 
+%12 L
+%17 L
+%33 [-D L] %9 K %11 [+A K] %11 K [-A +D] L %11 K 
+%30 [-D +A] %6 [-A +D] L %11 K %37 [-D L] +D %9 K .. [-D +A] %14 L %180 -A
+%384 # EOL
+%100
+! # LEVEL 51
+%37 L
+
+
+
+
+
+
+%10000 #hodl
