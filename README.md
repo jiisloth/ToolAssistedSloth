@@ -21,39 +21,53 @@ TAS player is the script actually running the TAS.
 
 ## Syntax
 Basic buttons:
-```
-H - START
-G - SELECT
 
-W - UP
-A - LEFT
-S - DOWN
-D - RIGHT
+`H - START`
 
-L - A
-K - B
-```
+`G - SELECT`
+
+
+`W - UP`
+
+`A - LEFT`
+
+`S - DOWN`
+
+`D - RIGHT`
+
+
+`L - A`
+
+`K - B`
+
+
 Holds:
-```
+
 Add + before the button to hold it and - for release
-```
+
 Timing:
-```
+
 Each button operation will use 1 frame of emulation time. To perform multiple action on same frame, add [ brackets ] around the button list.
-```
+
 Idle:
-```
-. - idle 1 frame
-%X - idles X frames, for example %23 will idle the next 23 frames
-@X - idles until emulation reaches frame X, for example @120 will wait for frame number 120 of the emulation before continuing
-```
+
+`. - idle 1 frame`
+
+`%X - idles X frames, for example %23 will idle the next 23 frames`
+
+`@X - idles until emulation reaches frame X, for example @120 will wait for frame number 120 of the emulation before continuing`
+
+
 Savestates:
-```
-! - create a savestate
-? - will create a temporary savestate
-```
+
+`! - create a savestate`
+
+`? - will create a temporary savestate`
+
+
 Misc:
-```
-X - Pause emualtion and open debug
-# - Comment, rest of the line is now a comment.
-```
+
+`X - Pause emualtion and open debug`
+
+`# - Comment, rest of the line is now a comment.`
+
