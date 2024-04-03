@@ -603,7 +603,11 @@ func run_emu_thread():
     var com = settings["runcommand"]
     
     var prog
-    var params = [com["emulator"], com["rom"], com["lua"], com["extra"], "--testrunner", "--EmulationSpeed=" + com["speed"]]
+    var extr = com["extra"].split(", ")
+    var params = [com["emulator"], com["rom"], com["lua"]]
+    var par2 = ["--testrunner", "--EmulationSpeed=" + com["speed"]]
+    params.append_array(extr)
+    params.append_array(par2)
     
     if not com["headless"]:
         params.erase("--testrunner")

@@ -828,10 +828,13 @@ func get_actual_charline(c,l):
         else:
             if l > 1:
                 var line = get_line(l-1).split("#")[0]
-                if line[-1] == " ":
-                    return Vector2(c-1,l)
+                if len(line)>0:
+                    if line[-1] == " ":
+                        return Vector2(c-1,l)
+                    else:
+                        return Vector2(len(line)-1,l-1)
                 else:
-                    return Vector2(len(line)-1,l-1)
+                    return Vector2(0,l)
     return Vector2.ZERO
 
 func _on_TextEdit_cursor_changed():
