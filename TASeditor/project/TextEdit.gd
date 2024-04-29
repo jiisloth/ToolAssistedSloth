@@ -30,6 +30,11 @@ var errors = {
 var line_height = 0
 var absolute_line_count = 0
 
+var line_delays = {}
+var sel_was = ""
+var cursor_was = ""
+
+
 var linestats = []
 const default_line = {
     "delay": {"line": 0, "cumulative": 0},
@@ -294,29 +299,71 @@ func get_absolute_line_count():
 
 func set_framecounts(total=false):
     var selected = get_selection_text()
-    var current_line = get_line(cursor_get_line())
+    var current_line_number = cursor_get_line()
+    var current_line = get_line(current_line_number)
     var l = Top.get_node("Line")
     var s = Top.get_node("Selected")
     var t = Top.get_node("Total")
+    var tc = Top.get_node("ToCursor")
     if len(selected) > 0:
-        set_delay(s, selected)
+        sel_was = selected
+        cursor_was = cursor_pos
+        get_node("../../Menu/HBoxContainer/Flip").disabled = false
+        set_delay(s, get_frames(selected))
         s.show()
         l.hide()
     else:
-        set_delay(l, current_line)
+        if has_focus():
+            sel_was = ""
+        get_node("../../Menu/HBoxContainer/Flip").disabled = true
+        var delay = -1
+        if line_delays.has(current_line_number):
+            if line_delays[current_line_number]["text"] == current_line:
+                delay = line_delays[current_line_number]["delay"]
+        if delay == -1:
+            delay = get_frames(current_line)
+            line_delays[current_line_number] = {"text": current_line, "delay": delay}
+        set_delay(l, delay)
         l.show()
         s.hide()
     if total:
-        set_delay(t, text, total)
+        var i = 0
+        var delay = 0
+        for line in text.split("\n"):
+            var found = false
+            if line_delays.has(i):
+                if line_delays[i]["text"] == line:
+                    delay += line_delays[i]["delay"]
+                    found = true
+            if not found:
+                var l_delay = get_frames(line)
+                line_delays[i] = {"text": line, "delay": l_delay}
+                delay += l_delay
+        set_delay(t, delay)
+        i += 1
+    var delay = 0
+    var i = 0
+    for line in text.split("\n"):
+        if i >= current_line_number:
+            delay += get_frames(line.left(cursor_get_column()))
+            break
+        var found = false
+        if line_delays.has(i):
+            if line_delays[i]["text"] == line:
+                delay += line_delays[i]["delay"]
+                found = true
+        if not found:
+            var l_delay = get_frames(line)
+            line_delays[i] = {"text": line, "delay": l_delay}
+            delay += l_delay
+        i += 1
+    set_delay(tc, delay)
         
-func set_delay(node, txt, full=false):
-    var frames = get_frames(txt, full)
+func set_delay(node, frames, full=false):
     node.get_child(1).text = "%df" % frames
     node.get_child(2).text = "%.2fs" % (frames/60.098814)
 
 func get_frames(txt, full=false):
-    if full:
-        pass
     var lines = txt.split("\n")
     var frames = 0
     for line in lines:
@@ -809,7 +856,6 @@ func go_to_rolling():
 
 func set_cursor_info():
     cursor_pos = Vector2(cursor_get_column(), cursor_get_line())
-    print_line_data(cursor_pos.y)
     Bottom.get_node("Cursor/Line").text = str(cursor_pos.y+1)
     Bottom.get_node("Cursor/Char").text = str(cursor_pos.x)
     holds = get_holds(cursor_pos)
@@ -840,3 +886,37 @@ func get_actual_charline(c,l):
 func _on_TextEdit_cursor_changed():
     set_framecounts()
     set_cursor_info()
+
+
+func _on_Flip_pressed():
+    var selected = get_selection_text()
+    if len(selected) > 0:
+        var sel_start = Vector2(get_selection_from_column(), get_selection_from_line())
+        var sel_end = Vector2(get_selection_to_column(), get_selection_to_line())
+        var edit = true
+        var repl = ""
+        for c in selected:
+            if c == "\n":
+                edit = true
+            if c == "#":
+                edit = false
+                
+            if edit == false:
+                repl += c
+            elif c == "A":
+                repl += "D"
+            elif c == "a":
+                repl += "d"
+            elif c == "D":
+                repl += "A"
+            elif c == "d":
+                repl += "a"
+            else:
+                repl += c
+        var lines = selected.split("\n")
+
+        insert_text_at_cursor(repl)
+        select(sel_start.y, sel_start.x, sel_end.y, sel_end.x)
+        
+        
+        
